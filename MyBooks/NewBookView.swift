@@ -28,13 +28,13 @@ struct NewBookView: View {
         .buttonStyle(.borderedProminent)
         .padding(.vertical)
         .disabled(title.isEmpty || author.isEmpty)
-        .navigationTitle("New Book")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-          ToolbarItem(placement: .topBarLeading) {
-            Button("Cancel") {
-              dismiss()
-            }
+      }
+      .navigationTitle("New Book")
+      .navigationBarTitleDisplayMode(.inline)
+      .toolbar {
+        ToolbarItem(placement: .topBarLeading) {
+          Button("Cancel") {
+            dismiss()
           }
         }
       }

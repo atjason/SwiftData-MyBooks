@@ -10,8 +10,10 @@ import SwiftData
 
 struct ContentView: View {
   @Environment(\.modelContext) private var modelContext
-  @State private var createNewBook = false
+  
   @Query(sort: \Book.title) private var books: [Book]
+  
+  @State private var createNewBook = false
     
   var body: some View {
     NavigationStack {
@@ -45,10 +47,16 @@ struct ContentView: View {
             }
           }
         }
+        .onDelete { indexSet in
+          indexSet.forEach { index in
+            modelContext.delete(books[index])
+          }
+        }
       }
       .listStyle(.plain)
       .navigationTitle("My Books")
       .toolbar {
+        EditButton()
         Button {
           createNewBook = true
         } label: {
