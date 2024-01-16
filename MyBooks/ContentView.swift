@@ -9,53 +9,63 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
-    var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+  @Environment(\.modelContext) private var modelContext
+  @State private var createNewBook = false
+  @Query(sort: \Book.title) private var books: [Book]
+    
+  var body: some View {
+    NavigationStack {
+      if books.isEmpty {
+        ContentUnavailableView("Enter your first book", systemImage: "book.fill")
+      }
+      
+      List {
+        ForEach(books) { book in
+          NavigationLink {
+            
+          } label: {
+            HStack(spacing: 20) {
+              Image(systemName: book.icon)
+                .font(.title)
+              VStack(alignment: .leading) {
+                Text(book.title)
+                  .font(.title2)
+                Text(book.author)
+                  .foregroundStyle(.secondary)
+                if let rating = book.rating {
+                  HStack {
+                    ForEach(0..<rating, id: \.self) { _ in
+                      Image(systemName: "star")
+                        .imageScale(.small)
+                        .foregroundColor(.yellow)
                     }
+                  }
                 }
-                .onDelete(perform: deleteItems)
+              }
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
+          }
         }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
+      }
+      .listStyle(.plain)
+      .navigationTitle("My Books")
+      .toolbar {
+        Button {
+          createNewBook = true
+        } label: {
+          Image(systemName: "plus")
+            .imageScale(.large)
         }
+      }
+      .sheet(isPresented: $createNewBook) {
+        NewBookView()
+          .presentationDetents([.medium])
+      }
     }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
-    }
+  }
 }
 
 #Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+  ContentView()
+    .modelContainer(for: Book.self)
+//    .modelContainer(for: Book.self, inMemory: true)
 }

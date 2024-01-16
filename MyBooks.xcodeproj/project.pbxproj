@@ -12,6 +12,8 @@
 		964EC17F2B566C6F0068E9F4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC17E2B566C6F0068E9F4 /* Item.swift */; };
 		964EC1812B566C710068E9F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964EC1802B566C710068E9F4 /* Assets.xcassets */; };
 		964EC1842B566C710068E9F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964EC1832B566C710068E9F4 /* Preview Assets.xcassets */; };
+		964EC18B2B566CA90068E9F4 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC18A2B566CA90068E9F4 /* Book.swift */; };
+		964EC18D2B566F9E0068E9F4 /* NewBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC18C2B566F9E0068E9F4 /* NewBookView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		964EC17E2B566C6F0068E9F4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		964EC1802B566C710068E9F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		964EC1832B566C710068E9F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		964EC18A2B566CA90068E9F4 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		964EC18C2B566F9E0068E9F4 /* NewBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			children = (
 				964EC17A2B566C6F0068E9F4 /* MyBooksApp.swift */,
 				964EC17C2B566C6F0068E9F4 /* ContentView.swift */,
+				964EC18C2B566F9E0068E9F4 /* NewBookView.swift */,
 				964EC17E2B566C6F0068E9F4 /* Item.swift */,
+				964EC18A2B566CA90068E9F4 /* Book.swift */,
 				964EC1802B566C710068E9F4 /* Assets.xcassets */,
 				964EC1822B566C710068E9F4 /* Preview Content */,
 			);
@@ -140,8 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				964EC18B2B566CA90068E9F4 /* Book.swift in Sources */,
 				964EC17D2B566C6F0068E9F4 /* ContentView.swift in Sources */,
 				964EC17F2B566C6F0068E9F4 /* Item.swift in Sources */,
+				964EC18D2B566F9E0068E9F4 /* NewBookView.swift in Sources */,
 				964EC17B2B566C6F0068E9F4 /* MyBooksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +292,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,6 +322,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
