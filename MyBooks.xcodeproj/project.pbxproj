@@ -14,6 +14,8 @@
 		964EC1842B566C710068E9F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964EC1832B566C710068E9F4 /* Preview Assets.xcassets */; };
 		964EC18B2B566CA90068E9F4 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC18A2B566CA90068E9F4 /* Book.swift */; };
 		964EC18D2B566F9E0068E9F4 /* NewBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC18C2B566F9E0068E9F4 /* NewBookView.swift */; };
+		964EC18F2B56BFEF0068E9F4 /* EditBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC18E2B56BFEF0068E9F4 /* EditBookView.swift */; };
+		964EC1912B56C4480068E9F4 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1902B56C4480068E9F4 /* RatingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		964EC1832B566C710068E9F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		964EC18A2B566CA90068E9F4 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		964EC18C2B566F9E0068E9F4 /* NewBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookView.swift; sourceTree = "<group>"; };
+		964EC18E2B56BFEF0068E9F4 /* EditBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBookView.swift; sourceTree = "<group>"; };
+		964EC1902B56C4480068E9F4 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,9 @@
 			children = (
 				964EC17A2B566C6F0068E9F4 /* MyBooksApp.swift */,
 				964EC17C2B566C6F0068E9F4 /* ContentView.swift */,
+				964EC18E2B56BFEF0068E9F4 /* EditBookView.swift */,
 				964EC18C2B566F9E0068E9F4 /* NewBookView.swift */,
+				964EC1902B56C4480068E9F4 /* RatingsView.swift */,
 				964EC17E2B566C6F0068E9F4 /* Item.swift */,
 				964EC18A2B566CA90068E9F4 /* Book.swift */,
 				964EC1802B566C710068E9F4 /* Assets.xcassets */,
@@ -147,8 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				964EC18B2B566CA90068E9F4 /* Book.swift in Sources */,
+				964EC1912B56C4480068E9F4 /* RatingsView.swift in Sources */,
 				964EC17D2B566C6F0068E9F4 /* ContentView.swift in Sources */,
 				964EC17F2B566C6F0068E9F4 /* Item.swift in Sources */,
+				964EC18F2B56BFEF0068E9F4 /* EditBookView.swift in Sources */,
 				964EC18D2B566F9E0068E9F4 /* NewBookView.swift in Sources */,
 				964EC17B2B566C6F0068E9F4 /* MyBooksApp.swift in Sources */,
 			);
