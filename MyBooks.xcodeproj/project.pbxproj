@@ -25,6 +25,7 @@
 		964EC1A12B57B2C30068E9F4 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1A02B57B2C30068E9F4 /* Color+Extension.swift */; };
 		964EC1A32B57B4150068E9F4 /* GenreSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1A22B57B4150068E9F4 /* GenreSamples.swift */; };
 		964EC1AA2B57B56C0068E9F4 /* GenresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1A92B57B56C0068E9F4 /* GenresView.swift */; };
+		964EC1AC2B57BD700068E9F4 /* NewGenreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1AB2B57BD700068E9F4 /* NewGenreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		964EC1A02B57B2C30068E9F4 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		964EC1A22B57B4150068E9F4 /* GenreSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreSamples.swift; sourceTree = "<group>"; };
 		964EC1A92B57B56C0068E9F4 /* GenresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresView.swift; sourceTree = "<group>"; };
+		964EC1AB2B57BD700068E9F4 /* NewGenreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGenreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				964EC1A92B57B56C0068E9F4 /* GenresView.swift */,
+				964EC1AB2B57BD700068E9F4 /* NewGenreView.swift */,
 			);
 			path = Genres;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				964EC18B2B566CA90068E9F4 /* Book.swift in Sources */,
 				964EC1A12B57B2C30068E9F4 /* Color+Extension.swift in Sources */,
 				964EC1912B56C4480068E9F4 /* RatingsView.swift in Sources */,
+				964EC1AC2B57BD700068E9F4 /* NewGenreView.swift in Sources */,
 				964EC1952B5767780068E9F4 /* PreviewContent.swift in Sources */,
 				964EC19D2B57B1CB0068E9F4 /* Genre.swift in Sources */,
 				964EC17D2B566C6F0068E9F4 /* ContentView.swift in Sources */,

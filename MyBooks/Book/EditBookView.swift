@@ -21,6 +21,7 @@ struct EditBookView: View {
   @State private var dateAdded = Date.distantPast
   @State private var dateStarted = Date.distantPast
   @State private var dateCompleted = Date.distantPast
+  @State private var showGenres = false
 
   var body: some View {
     HStack {
@@ -97,11 +98,19 @@ struct EditBookView: View {
           RoundedRectangle(cornerRadius: 20)
             .stroke(Color(uiColor: .tertiarySystemFill), lineWidth: 1)
         )
-      NavigationLink {
-        QuotesListView(book: book)
-      } label: {
-        let count = book.quotes?.count ?? 0
-        Label("^[\(count) quotes](inflect: true)", systemImage: "quote.opening")
+      HStack {
+        Button("Show Genres") {
+          showGenres.toggle()
+        }
+        .sheet(isPresented: $showGenres) {
+          GenresView(book: book)
+        }
+        NavigationLink {
+          QuotesListView(book: book)
+        } label: {
+          let count = book.quotes?.count ?? 0
+          Label("^[\(count) quotes](inflect: true)", systemImage: "quote.opening")
+        }
       }
       .buttonStyle(.bordered)
       .frame(maxWidth: .infinity, alignment: .trailing)
