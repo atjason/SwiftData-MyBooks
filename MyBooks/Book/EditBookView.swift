@@ -98,6 +98,9 @@ struct EditBookView: View {
           RoundedRectangle(cornerRadius: 20)
             .stroke(Color(uiColor: .tertiarySystemFill), lineWidth: 1)
         )
+      if let genres = book.genres {
+        GenresStackView(genres: genres)
+      }
       HStack {
         Button("Show Genres") {
           showGenres.toggle()

@@ -26,6 +26,7 @@
 		964EC1A32B57B4150068E9F4 /* GenreSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1A22B57B4150068E9F4 /* GenreSamples.swift */; };
 		964EC1AA2B57B56C0068E9F4 /* GenresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1A92B57B56C0068E9F4 /* GenresView.swift */; };
 		964EC1AC2B57BD700068E9F4 /* NewGenreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1AB2B57BD700068E9F4 /* NewGenreView.swift */; };
+		964EC1AE2B57C5430068E9F4 /* GenresStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1AD2B57C5430068E9F4 /* GenresStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		964EC1A22B57B4150068E9F4 /* GenreSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreSamples.swift; sourceTree = "<group>"; };
 		964EC1A92B57B56C0068E9F4 /* GenresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresView.swift; sourceTree = "<group>"; };
 		964EC1AB2B57BD700068E9F4 /* NewGenreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGenreView.swift; sourceTree = "<group>"; };
+		964EC1AD2B57C5430068E9F4 /* GenresStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			children = (
 				964EC1A92B57B56C0068E9F4 /* GenresView.swift */,
 				964EC1AB2B57BD700068E9F4 /* NewGenreView.swift */,
+				964EC1AD2B57C5430068E9F4 /* GenresStackView.swift */,
 			);
 			path = Genres;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				964EC1952B5767780068E9F4 /* PreviewContent.swift in Sources */,
 				964EC19D2B57B1CB0068E9F4 /* Genre.swift in Sources */,
 				964EC17D2B566C6F0068E9F4 /* ContentView.swift in Sources */,
+				964EC1AE2B57C5430068E9F4 /* GenresStackView.swift in Sources */,
 				964EC1932B5766200068E9F4 /* BookSamples.swift in Sources */,
 				964EC18F2B56BFEF0068E9F4 /* EditBookView.swift in Sources */,
 				964EC1972B576ED20068E9F4 /* BookListView.swift in Sources */,
