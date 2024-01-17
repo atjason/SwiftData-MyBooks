@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		964EC17B2B566C6F0068E9F4 /* MyBooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC17A2B566C6F0068E9F4 /* MyBooksApp.swift */; };
 		964EC17D2B566C6F0068E9F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC17C2B566C6F0068E9F4 /* ContentView.swift */; };
-		964EC17F2B566C6F0068E9F4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC17E2B566C6F0068E9F4 /* Item.swift */; };
 		964EC1812B566C710068E9F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964EC1802B566C710068E9F4 /* Assets.xcassets */; };
 		964EC1842B566C710068E9F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964EC1832B566C710068E9F4 /* Preview Assets.xcassets */; };
 		964EC18B2B566CA90068E9F4 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC18A2B566CA90068E9F4 /* Book.swift */; };
@@ -25,7 +24,6 @@
 		964EC1772B566C6F0068E9F4 /* MyBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		964EC17A2B566C6F0068E9F4 /* MyBooksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksApp.swift; sourceTree = "<group>"; };
 		964EC17C2B566C6F0068E9F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		964EC17E2B566C6F0068E9F4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		964EC1802B566C710068E9F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		964EC1832B566C710068E9F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		964EC18A2B566CA90068E9F4 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 				964EC18E2B56BFEF0068E9F4 /* EditBookView.swift */,
 				964EC18C2B566F9E0068E9F4 /* NewBookView.swift */,
 				964EC1902B56C4480068E9F4 /* RatingsView.swift */,
-				964EC17E2B566C6F0068E9F4 /* Item.swift */,
 				964EC18A2B566CA90068E9F4 /* Book.swift */,
 				964EC1802B566C710068E9F4 /* Assets.xcassets */,
 				964EC1822B566C710068E9F4 /* Preview Content */,
@@ -165,7 +162,6 @@
 				964EC1912B56C4480068E9F4 /* RatingsView.swift in Sources */,
 				964EC1952B5767780068E9F4 /* PreviewContent.swift in Sources */,
 				964EC17D2B566C6F0068E9F4 /* ContentView.swift in Sources */,
-				964EC17F2B566C6F0068E9F4 /* Item.swift in Sources */,
 				964EC1932B5766200068E9F4 /* BookSamples.swift in Sources */,
 				964EC18F2B56BFEF0068E9F4 /* EditBookView.swift in Sources */,
 				964EC1972B576ED20068E9F4 /* BookListView.swift in Sources */,
