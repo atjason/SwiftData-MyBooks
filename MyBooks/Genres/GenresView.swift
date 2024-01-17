@@ -48,7 +48,12 @@ struct GenresView: View {
             }
             .onDelete { indexSet in
               indexSet.forEach { index in
-                modelContext.delete(genres[index])
+                let genre = genres[index]
+                if let index = book.genres?.firstIndex(where: { $0.id == genre.id }) {
+                  book.genres?.remove(at: index)
+                }
+                modelContext.delete(genre)
+                try? modelContext.save()
               }
             }
             LabeledContent {
