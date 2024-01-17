@@ -11,8 +11,8 @@ import SwiftData
 struct BookListView: View {
   @Environment(\.modelContext) private var modelContext
   @Query private var books: [Book]
-
-  init(sortOrder: SortOrder) {
+  
+  init(sortOrder: SortOrder, filterString: String) {
     let sortDescriptions: [SortDescriptor<Book>] = {
       switch sortOrder {
       case .title:
@@ -23,7 +23,12 @@ struct BookListView: View {
         return [SortDescriptor(\Book.title)]
       }
     }()
-    _books = Query(sort: sortDescriptions)
+    let filter = #Predicate<Book> {
+      filterString.isEmpty
+      || $0.title.localizedStandardContains(filterString)
+      || $0.author.localizedStandardContains(filterString)
+    }
+    _books = Query(filter: filter, sort: sortDescriptions)
   }
   var body: some View {
     NavigationStack {
@@ -69,8 +74,8 @@ struct BookListView: View {
 #Preview {
   let preview = Preview(Book.self)
   preview.addExamples(Book.samples)
-  return BookListView(sortOrder: .title)
+  return BookListView(sortOrder: .title, filterString: "")
     .modelContainer(preview.container)
-//    .modelContainer(for: Book.self)
-//    .modelContainer(for: Book.self, inMemory: true)
+  //    .modelContainer(for: Book.self)
+  //    .modelContainer(for: Book.self, inMemory: true)
 }

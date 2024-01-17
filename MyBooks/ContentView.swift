@@ -11,7 +11,8 @@ import SwiftData
 struct ContentView: View {
   @State private var createNewBook = false
   @State private var sortOrder = SortOrder.title
-    
+  @State private var filterString = ""
+  
   var body: some View {
     NavigationStack {
       Picker("", selection: $sortOrder) {
@@ -20,23 +21,24 @@ struct ContentView: View {
         }
       }
       .buttonStyle(.bordered)
-      BookListView(sortOrder: sortOrder)
-      .listStyle(.plain)
-      .navigationTitle("My Books")
-      .toolbar {
-        EditButton()
-        Button {
-          createNewBook = true
-        } label: {
-          Image(systemName: "plus")
-            .imageScale(.large)
+      BookListView(sortOrder: sortOrder, filterString: filterString)
+        .listStyle(.plain)
+        .navigationTitle("My Books")
+        .toolbar {
+          EditButton()
+          Button {
+            createNewBook = true
+          } label: {
+            Image(systemName: "plus")
+              .imageScale(.large)
+          }
         }
-      }
-      .sheet(isPresented: $createNewBook) {
-        NewBookView()
-          .presentationDetents([.medium])
-      }
+        .sheet(isPresented: $createNewBook) {
+          NewBookView()
+            .presentationDetents([.medium])
+        }
     }
+    .searchable(text: $filterString, prompt: Text("Search title or author"))
   }
 }
 
@@ -45,6 +47,6 @@ struct ContentView: View {
   preview.addExamples(Book.samples)
   return ContentView()
     .modelContainer(preview.container)
-//    .modelContainer(for: Book.self)
-//    .modelContainer(for: Book.self, inMemory: true)
+  //    .modelContainer(for: Book.self)
+  //    .modelContainer(for: Book.self, inMemory: true)
 }
