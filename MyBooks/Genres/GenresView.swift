@@ -32,39 +32,40 @@ struct GenresView: View {
             }
             .buttonStyle(.borderedProminent)
           }
-        }
-        
-        List {
-          ForEach(genres) { genre in
-            HStack {
-              Button {
-                addRemove(genre)
-              } label: {
-                Image(systemName: book.genres?.contains(genre) == true ? "circle.fill" : "circle")
+          
+        } else {
+          List {
+            ForEach(genres) { genre in
+              HStack {
+                Button {
+                  addRemove(genre)
+                } label: {
+                  Image(systemName: book.genres?.contains(genre) == true ? "circle.fill" : "circle")
+                }
+                .foregroundColor(genre.hexColor)
+                Text(genre.name)
               }
-              .foregroundColor(genre.hexColor)
-              Text(genre.name)
             }
-          }
-          .onDelete { indexSet in
-            indexSet.forEach { index in
-              modelContext.delete(genres[index])
+            .onDelete { indexSet in
+              indexSet.forEach { index in
+                modelContext.delete(genres[index])
+              }
             }
-          }
-          LabeledContent {
-            Button {
-              newGenre.toggle()
+            LabeledContent {
+              Button {
+                newGenre.toggle()
+              } label: {
+                Image(systemName: "plus.circle.fill")
+                  .imageScale(.large)
+              }
+              .buttonStyle(.borderedProminent)
             } label: {
-              Image(systemName: "plus.circle.fill")
-                .imageScale(.large)
+              Text("Create a genre")
+                .foregroundStyle(.secondary)
             }
-            .buttonStyle(.borderedProminent)
-          } label: {
-            Text("Create a genre")
-              .foregroundStyle(.secondary)
           }
+          .listStyle(.plain)
         }
-        .listStyle(.plain)
       }
       .navigationTitle(book.title)
       .sheet(isPresented: $newGenre) {
