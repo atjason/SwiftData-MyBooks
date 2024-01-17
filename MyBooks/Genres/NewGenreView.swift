@@ -34,6 +34,13 @@ struct NewGenreView: View {
       .padding()
       .navigationTitle("New Genre")
       .navigationBarTitleDisplayMode(.inline)
+      .toolbar {
+        ToolbarItem(placement: .topBarLeading) {
+          Button("Cancel") {
+            dismiss()
+          }
+        }
+      }
     }
   }
 }
