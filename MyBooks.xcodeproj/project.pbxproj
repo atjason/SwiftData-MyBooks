@@ -16,6 +16,8 @@
 		964EC18D2B566F9E0068E9F4 /* NewBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC18C2B566F9E0068E9F4 /* NewBookView.swift */; };
 		964EC18F2B56BFEF0068E9F4 /* EditBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC18E2B56BFEF0068E9F4 /* EditBookView.swift */; };
 		964EC1912B56C4480068E9F4 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1902B56C4480068E9F4 /* RatingsView.swift */; };
+		964EC1932B5766200068E9F4 /* BookSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1922B5766200068E9F4 /* BookSamples.swift */; };
+		964EC1952B5767780068E9F4 /* PreviewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1942B5767780068E9F4 /* PreviewContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		964EC18C2B566F9E0068E9F4 /* NewBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookView.swift; sourceTree = "<group>"; };
 		964EC18E2B56BFEF0068E9F4 /* EditBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBookView.swift; sourceTree = "<group>"; };
 		964EC1902B56C4480068E9F4 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
+		964EC1922B5766200068E9F4 /* BookSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSamples.swift; sourceTree = "<group>"; };
+		964EC1942B5767780068E9F4 /* PreviewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				964EC1832B566C710068E9F4 /* Preview Assets.xcassets */,
+				964EC1922B5766200068E9F4 /* BookSamples.swift */,
+				964EC1942B5767780068E9F4 /* PreviewContent.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -154,8 +160,10 @@
 			files = (
 				964EC18B2B566CA90068E9F4 /* Book.swift in Sources */,
 				964EC1912B56C4480068E9F4 /* RatingsView.swift in Sources */,
+				964EC1952B5767780068E9F4 /* PreviewContent.swift in Sources */,
 				964EC17D2B566C6F0068E9F4 /* ContentView.swift in Sources */,
 				964EC17F2B566C6F0068E9F4 /* Item.swift in Sources */,
+				964EC1932B5766200068E9F4 /* BookSamples.swift in Sources */,
 				964EC18F2B56BFEF0068E9F4 /* EditBookView.swift in Sources */,
 				964EC18D2B566F9E0068E9F4 /* NewBookView.swift in Sources */,
 				964EC17B2B566C6F0068E9F4 /* MyBooksApp.swift in Sources */,

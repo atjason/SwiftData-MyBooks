@@ -140,5 +140,7 @@ struct EditBookView: View {
 
 #Preview {
   @State var book = Book(title: "", author: "")
-  return EditBookView(book: book)
+  return NavigationStack {
+    EditBookView(book: book)
+  }
 }

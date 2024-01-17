@@ -23,7 +23,7 @@ final class Book {
     switch(status) {
     case .onShelf: "checkmark.diamond.fill"
     case .inProgress: "book.fill"
-    case .completed: "book.vertical.fill"
+    case .completed: "book.closed.fill"
     }
   }
   
