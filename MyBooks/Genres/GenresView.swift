@@ -70,6 +70,7 @@ struct GenresView: View {
       .navigationTitle(book.title)
       .sheet(isPresented: $newGenre) {
         NewGenreView()
+          .presentationDetents([.medium])
       }
       .toolbar {
         ToolbarItem(placement: .topBarLeading) {
