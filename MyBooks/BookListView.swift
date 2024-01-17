@@ -20,7 +20,7 @@ struct BookListView: View {
       case .author:
         return [SortDescriptor(\Book.author)]
       case .status:
-        return [SortDescriptor(\Book.status.rawValue)]
+        return [SortDescriptor(\Book.title)]
       }
     }()
     _books = Query(sort: sortDescriptions)
