@@ -23,6 +23,7 @@
 		964EC19D2B57B1CB0068E9F4 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC19C2B57B1CB0068E9F4 /* Genre.swift */; };
 		964EC19F2B57B23F0068E9F4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC19E2B57B23F0068E9F4 /* UIColor+Extension.swift */; };
 		964EC1A12B57B2C30068E9F4 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1A02B57B2C30068E9F4 /* Color+Extension.swift */; };
+		964EC1A32B57B4150068E9F4 /* GenreSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1A22B57B4150068E9F4 /* GenreSamples.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		964EC19C2B57B1CB0068E9F4 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		964EC19E2B57B23F0068E9F4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		964EC1A02B57B2C30068E9F4 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		964EC1A22B57B4150068E9F4 /* GenreSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreSamples.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,16 +79,12 @@
 			children = (
 				964EC17A2B566C6F0068E9F4 /* MyBooksApp.swift */,
 				964EC17C2B566C6F0068E9F4 /* ContentView.swift */,
-				964EC1962B576ED20068E9F4 /* BookListView.swift */,
-				964EC18E2B56BFEF0068E9F4 /* EditBookView.swift */,
-				964EC18C2B566F9E0068E9F4 /* NewBookView.swift */,
+				964EC1A42B57B4CA0068E9F4 /* Book */,
 				964EC1902B56C4480068E9F4 /* RatingsView.swift */,
-				964EC19A2B5799FE0068E9F4 /* QuotesListView.swift */,
-				964EC18A2B566CA90068E9F4 /* Book.swift */,
-				964EC1982B5798E90068E9F4 /* Quote.swift */,
-				964EC19C2B57B1CB0068E9F4 /* Genre.swift */,
-				964EC19E2B57B23F0068E9F4 /* UIColor+Extension.swift */,
-				964EC1A02B57B2C30068E9F4 /* Color+Extension.swift */,
+				964EC1A82B57B5430068E9F4 /* Genres */,
+				964EC1A72B57B50A0068E9F4 /* Quotes */,
+				964EC1A52B57B4E70068E9F4 /* Models */,
+				964EC1A62B57B4F90068E9F4 /* Extensions */,
 				964EC1802B566C710068E9F4 /* Assets.xcassets */,
 				964EC1822B566C710068E9F4 /* Preview Content */,
 			);
@@ -98,9 +96,54 @@
 			children = (
 				964EC1832B566C710068E9F4 /* Preview Assets.xcassets */,
 				964EC1922B5766200068E9F4 /* BookSamples.swift */,
+				964EC1A22B57B4150068E9F4 /* GenreSamples.swift */,
 				964EC1942B5767780068E9F4 /* PreviewContent.swift */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		964EC1A42B57B4CA0068E9F4 /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				964EC1962B576ED20068E9F4 /* BookListView.swift */,
+				964EC18E2B56BFEF0068E9F4 /* EditBookView.swift */,
+				964EC18C2B566F9E0068E9F4 /* NewBookView.swift */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
+		964EC1A52B57B4E70068E9F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				964EC18A2B566CA90068E9F4 /* Book.swift */,
+				964EC1982B5798E90068E9F4 /* Quote.swift */,
+				964EC19C2B57B1CB0068E9F4 /* Genre.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		964EC1A62B57B4F90068E9F4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				964EC19E2B57B23F0068E9F4 /* UIColor+Extension.swift */,
+				964EC1A02B57B2C30068E9F4 /* Color+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		964EC1A72B57B50A0068E9F4 /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				964EC19A2B5799FE0068E9F4 /* QuotesListView.swift */,
+			);
+			path = Quotes;
+			sourceTree = "<group>";
+		};
+		964EC1A82B57B5430068E9F4 /* Genres */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Genres;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +226,7 @@
 				964EC18F2B56BFEF0068E9F4 /* EditBookView.swift in Sources */,
 				964EC1972B576ED20068E9F4 /* BookListView.swift in Sources */,
 				964EC18D2B566F9E0068E9F4 /* NewBookView.swift in Sources */,
+				964EC1A32B57B4150068E9F4 /* GenreSamples.swift in Sources */,
 				964EC1992B5798E90068E9F4 /* Quote.swift in Sources */,
 				964EC19F2B57B23F0068E9F4 /* UIColor+Extension.swift in Sources */,
 				964EC17B2B566C6F0068E9F4 /* MyBooksApp.swift in Sources */,
