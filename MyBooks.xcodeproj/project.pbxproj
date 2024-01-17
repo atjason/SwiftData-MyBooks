@@ -24,6 +24,7 @@
 		964EC19F2B57B23F0068E9F4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC19E2B57B23F0068E9F4 /* UIColor+Extension.swift */; };
 		964EC1A12B57B2C30068E9F4 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1A02B57B2C30068E9F4 /* Color+Extension.swift */; };
 		964EC1A32B57B4150068E9F4 /* GenreSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1A22B57B4150068E9F4 /* GenreSamples.swift */; };
+		964EC1AA2B57B56C0068E9F4 /* GenresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1A92B57B56C0068E9F4 /* GenresView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		964EC19E2B57B23F0068E9F4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		964EC1A02B57B2C30068E9F4 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		964EC1A22B57B4150068E9F4 /* GenreSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreSamples.swift; sourceTree = "<group>"; };
+		964EC1A92B57B56C0068E9F4 /* GenresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		964EC1A82B57B5430068E9F4 /* Genres */ = {
 			isa = PBXGroup;
 			children = (
+				964EC1A92B57B56C0068E9F4 /* GenresView.swift */,
 			);
 			path = Genres;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				964EC18F2B56BFEF0068E9F4 /* EditBookView.swift in Sources */,
 				964EC1972B576ED20068E9F4 /* BookListView.swift in Sources */,
 				964EC18D2B566F9E0068E9F4 /* NewBookView.swift in Sources */,
+				964EC1AA2B57B56C0068E9F4 /* GenresView.swift in Sources */,
 				964EC1A32B57B4150068E9F4 /* GenreSamples.swift in Sources */,
 				964EC1992B5798E90068E9F4 /* Quote.swift in Sources */,
 				964EC19F2B57B23F0068E9F4 /* UIColor+Extension.swift in Sources */,
