@@ -25,6 +25,7 @@ final class Book {
   var rating: Int?
   var status: Status
   var recommendedBy = ""
+  var quotes: [Quote]?
   
   var icon: String {
     switch(status) {
