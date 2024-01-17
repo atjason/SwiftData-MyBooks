@@ -46,6 +46,11 @@ struct GenresView: View {
               Text(genre.name)
             }
           }
+          .onDelete { indexSet in
+            indexSet.forEach { index in
+              modelContext.delete(genres[index])
+            }
+          }
           LabeledContent {
             Button {
               newGenre.toggle()
