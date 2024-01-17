@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct EditBookView: View {
+  @Environment(\.dismiss) var dismiss
+  
+  @Bindable var book: Book
+
   @State private var status = Status.onShelf
   @State private var rating: Int?
   @State private var title = ""
@@ -63,10 +67,78 @@ struct EditBookView: View {
           dateCompleted = Date()
         }
       }
+      Divider()
+      LabeledContent {
+        RatingsView(maxRating: 5, currentRating: $rating, width: 30)
+      } label: {
+        Text("Rating").foregroundStyle(.secondary)
+      }
+      LabeledContent {
+        TextField("", text: $title)
+      } label: {
+        Text("Title").foregroundStyle(.secondary)
+      }
+      LabeledContent {
+        TextField("", text: $author)
+      } label: {
+        Text("Author").foregroundStyle(.secondary)
+      }
+      Divider()
+      Text("Summary").foregroundStyle(.secondary)
+      TextEditor(text: $summary)
+        .padding(5)
+        .overlay(
+          RoundedRectangle(cornerRadius: 20)
+            .stroke(Color(uiColor: .tertiarySystemFill), lineWidth: 1)
+        )
     }
+    .padding()
+    .textFieldStyle(.roundedBorder)
+    .navigationTitle(title)
+    .navigationBarTitleDisplayMode(.inline)
+    .toolbar {
+      ToolbarItem(placement: .navigationBarTrailing) {
+        Button("Save") {
+          book.status = status
+          book.rating = rating
+          book.title = title
+          book.author = author
+          book.summary = summary
+          book.dateAdded = dateAdded
+          book.dateStarted = dateStarted
+          book.dateCompleted = dateCompleted
+          
+          dismiss()
+        }
+        .buttonStyle(.borderedProminent)
+        .disabled(!changed)
+      }
+    }
+    .onAppear {
+      status = book.status
+      rating = book.rating
+      title = book.title
+      author = book.author
+      summary = book.summary
+      dateAdded = book.dateAdded
+      dateStarted = book.dateStarted
+      dateCompleted = book.dateCompleted
+    }
+  }
+
+  var changed: Bool {
+    status != book.status ||
+    rating != book.rating ||
+    title != book.title ||
+    author != book.author ||
+    summary != book.summary ||
+    dateAdded != book.dateAdded ||
+    dateStarted != book.dateStarted ||
+    dateCompleted != book.dateCompleted
   }
 }
 
 #Preview {
-  EditBookView()
+  @State var book = Book(title: "", author: "")
+  return EditBookView(book: book)
 }
