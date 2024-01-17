@@ -9,50 +9,18 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-  @Environment(\.modelContext) private var modelContext
-  
-  @Query(sort: \Book.title) private var books: [Book]
-  
   @State private var createNewBook = false
+  @State private var sortOrder = SortOrder.title
     
   var body: some View {
     NavigationStack {
-      if books.isEmpty {
-        ContentUnavailableView("Enter your first book", systemImage: "book.fill")
-      }
-      
-      List {
-        ForEach(books) { book in
-          NavigationLink {
-            EditBookView(book: book)
-          } label: {
-            HStack(spacing: 20) {
-              Image(systemName: book.icon)
-                .font(.title)
-              VStack(alignment: .leading) {
-                Text(book.title)
-                  .font(.title2)
-                Text(book.author)
-                  .foregroundStyle(.secondary)
-                if let rating = book.rating {
-                  HStack {
-                    ForEach(1..<rating, id: \.self) { _ in
-                      Image(systemName: "star")
-                        .imageScale(.small)
-                        .foregroundColor(.yellow)
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-        .onDelete { indexSet in
-          indexSet.forEach { index in
-            modelContext.delete(books[index])
-          }
+      Picker("", selection: $sortOrder) {
+        ForEach(SortOrder.allCases) { order in
+          Text("Sort by " + order.rawValue.capitalized).tag(order)
         }
       }
+      .buttonStyle(.bordered)
+      BookListView(sortOrder: sortOrder)
       .listStyle(.plain)
       .navigationTitle("My Books")
       .toolbar {

@@ -8,6 +8,12 @@
 import Foundation
 import SwiftData
 
+enum SortOrder: String, Identifiable, CaseIterable {
+  case title, author, status
+
+  var id: Self { self }
+}
+
 @Model
 final class Book {
   var title: String
