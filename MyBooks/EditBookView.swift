@@ -34,20 +34,20 @@ struct EditBookView: View {
     VStack(alignment: .leading) {
       GroupBox {
         LabeledContent {
-          DatePicker("", selection: $dateAdded, displayedComponents: .date)
+          DatePicker("", selection: $dateAdded, in: ...Date.now, displayedComponents: .date)
         } label: {
           Text("Date Added")
         }
         if status == .inProgress || status == .completed {
           LabeledContent {
-            DatePicker("", selection: $dateStarted, displayedComponents: .date)
+            DatePicker("", selection: $dateStarted, in: dateAdded...Date.now, displayedComponents: .date)
           } label: {
             Text("Date Started")
           }
         }
         if status == .completed {
           LabeledContent {
-            DatePicker("", selection: $dateCompleted, displayedComponents: .date)
+            DatePicker("", selection: $dateCompleted, in: dateStarted...Date.now, displayedComponents: .date)
           } label: {
             Text("Date Completed")
           }
