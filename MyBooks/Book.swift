@@ -25,8 +25,12 @@ final class Book {
   var rating: Int?
   var status: Status
   var recommendedBy = ""
+  
   @Relationship(deleteRule: .cascade)
   var quotes: [Quote]?
+  
+  @Relationship(inverse: \Genre.books)
+  var genres: [Genre]?
   
   var icon: String {
     switch(status) {
