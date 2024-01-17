@@ -73,7 +73,7 @@ struct ContentView: View {
 }
 
 #Preview {
-  let preview = Preview()
+  let preview = Preview(Book.self)
   preview.addExamples(Book.samples)
   return ContentView()
     .modelContainer(preview.container)
