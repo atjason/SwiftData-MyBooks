@@ -16,14 +16,14 @@ enum SortOrder: String, Identifiable, CaseIterable {
 
 @Model
 final class Book {
-  var title: String
-  var author: String
-  var dateAdded: Date
-  var dateStarted: Date
-  var dateCompleted: Date
-  var summary: String
+  var title: String = ""
+  var author: String = ""
+  var dateAdded: Date = Date.distantPast
+  var dateStarted: Date = Date.distantPast
+  var dateCompleted: Date = Date.distantPast
+  var summary: String = ""
   var rating: Int?
-  var status: Status
+  var status: Status = Status.onShelf
   var recommendedBy = ""
   
   @Relationship(deleteRule: .cascade)
