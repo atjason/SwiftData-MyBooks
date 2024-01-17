@@ -17,6 +17,7 @@ struct EditBookView: View {
   @State private var title = ""
   @State private var author = ""
   @State private var summary = ""
+  @State private var recommendedBy = ""
   @State private var dateAdded = Date.distantPast
   @State private var dateStarted = Date.distantPast
   @State private var dateCompleted = Date.distantPast
@@ -83,6 +84,11 @@ struct EditBookView: View {
       } label: {
         Text("Author").foregroundStyle(.secondary)
       }
+      LabeledContent {
+        TextField("", text: $recommendedBy)
+      } label: {
+        Text("Recommended By").foregroundStyle(.secondary)
+      }
       Divider()
       Text("Summary").foregroundStyle(.secondary)
       TextEditor(text: $summary)
@@ -107,6 +113,7 @@ struct EditBookView: View {
           book.dateAdded = dateAdded
           book.dateStarted = dateStarted
           book.dateCompleted = dateCompleted
+          book.recommendedBy = recommendedBy
           
           dismiss()
         }
@@ -123,6 +130,7 @@ struct EditBookView: View {
       dateAdded = book.dateAdded
       dateStarted = book.dateStarted
       dateCompleted = book.dateCompleted
+      recommendedBy = book.recommendedBy
     }
   }
 
@@ -134,7 +142,8 @@ struct EditBookView: View {
     summary != book.summary ||
     dateAdded != book.dateAdded ||
     dateStarted != book.dateStarted ||
-    dateCompleted != book.dateCompleted
+    dateCompleted != book.dateCompleted ||
+    recommendedBy != book.recommendedBy
   }
 }
 
