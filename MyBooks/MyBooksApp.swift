@@ -10,28 +10,27 @@ import SwiftData
 
 @main
 struct MyBooksApp: App {
-//  var sharedModelContainer: ModelContainer = {
-//    let schema = Schema([
-//      Item.self,
-//    ])
-//    let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-//    
-//    do {
-//      return try ModelContainer(for: schema, configurations: [modelConfiguration])
-//    } catch {
-//      fatalError("Could not create ModelContainer: \(error)")
-//    }
-//  }()
+  
+  var modelContainer: ModelContainer = {
+    let schema = Schema([Book.self])
+//    let config = ModelConfiguration(url: URL.documentsDirectory.appending(path: "MyBooks.store"))
+    let config = ModelConfiguration("MyBooks", schema: schema) // Create "MyBooks.store"
+    do {
+      return try ModelContainer(for: schema, configurations: config)
+    } catch {
+      fatalError("Could not create ModelContainer: \(error)")
+    }
+  }()
   
   init() {
-    print(URL.applicationSupportDirectory.path(percentEncoded: false))
+   print(URL.applicationSupportDirectory.path(percentEncoded: false))
   }
   
   var body: some Scene {
     WindowGroup {
       ContentView()
     }
-    .modelContainer(for: Book.self)
-//    .modelContainer(sharedModelContainer)
+//    .modelContainer(for: Book.self)
+    .modelContainer(modelContainer)
   }
 }

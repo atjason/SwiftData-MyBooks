@@ -36,7 +36,7 @@ struct ContentView: View {
                   .foregroundStyle(.secondary)
                 if let rating = book.rating {
                   HStack {
-                    ForEach(0..<rating, id: \.self) { _ in
+                    ForEach(1..<rating, id: \.self) { _ in
                       Image(systemName: "star")
                         .imageScale(.small)
                         .foregroundColor(.yellow)
