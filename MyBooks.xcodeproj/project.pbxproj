@@ -19,6 +19,7 @@
 		964EC1952B5767780068E9F4 /* PreviewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1942B5767780068E9F4 /* PreviewContent.swift */; };
 		964EC1972B576ED20068E9F4 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1962B576ED20068E9F4 /* BookListView.swift */; };
 		964EC1992B5798E90068E9F4 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC1982B5798E90068E9F4 /* Quote.swift */; };
+		964EC19B2B5799FE0068E9F4 /* QuotesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EC19A2B5799FE0068E9F4 /* QuotesListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		964EC1942B5767780068E9F4 /* PreviewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContent.swift; sourceTree = "<group>"; };
 		964EC1962B576ED20068E9F4 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
 		964EC1982B5798E90068E9F4 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		964EC19A2B5799FE0068E9F4 /* QuotesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				964EC18E2B56BFEF0068E9F4 /* EditBookView.swift */,
 				964EC18C2B566F9E0068E9F4 /* NewBookView.swift */,
 				964EC1902B56C4480068E9F4 /* RatingsView.swift */,
+				964EC19A2B5799FE0068E9F4 /* QuotesListView.swift */,
 				964EC18A2B566CA90068E9F4 /* Book.swift */,
 				964EC1982B5798E90068E9F4 /* Quote.swift */,
 				964EC1802B566C710068E9F4 /* Assets.xcassets */,
@@ -171,6 +174,7 @@
 				964EC18D2B566F9E0068E9F4 /* NewBookView.swift in Sources */,
 				964EC1992B5798E90068E9F4 /* Quote.swift in Sources */,
 				964EC17B2B566C6F0068E9F4 /* MyBooksApp.swift in Sources */,
+				964EC19B2B5799FE0068E9F4 /* QuotesListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
