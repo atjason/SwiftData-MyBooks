@@ -58,7 +58,11 @@ struct BookListView: View {
                   }
                 }
                 if let genres = book.genres {
-                  GenresStackView(genres: genres)
+                  ViewThatFits {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                      GenresStackView(genres: genres)
+                    }
+                  }
                 }
               }
             }

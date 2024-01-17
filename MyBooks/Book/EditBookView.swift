@@ -99,7 +99,11 @@ struct EditBookView: View {
             .stroke(Color(uiColor: .tertiarySystemFill), lineWidth: 1)
         )
       if let genres = book.genres {
-        GenresStackView(genres: genres)
+        ViewThatFits {
+          ScrollView(.horizontal, showsIndicators: false) {
+            GenresStackView(genres: genres)
+          }
+        }
       }
       HStack {
         Button("Show Genres") {
