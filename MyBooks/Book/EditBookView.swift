@@ -176,6 +176,7 @@ struct EditBookView: View {
           book.dateStarted = dateStarted
           book.dateCompleted = dateCompleted
           book.recommendedBy = recommendedBy
+          book.bookCover = selectedBookCoverData
           
           dismiss()
         }
@@ -193,9 +194,12 @@ struct EditBookView: View {
       dateStarted = book.dateStarted
       dateCompleted = book.dateCompleted
       recommendedBy = book.recommendedBy
+      selectedBookCoverData = book.bookCover
     }
     .task(id: selectedBookCover) {
-      selectedBookCoverData = try? await selectedBookCover?.loadTransferable(type: Data.self)
+      if let selectedBookCover {
+        selectedBookCoverData = try? await selectedBookCover.loadTransferable(type: Data.self)
+      }
     }
   }
 
@@ -208,7 +212,8 @@ struct EditBookView: View {
     dateAdded != book.dateAdded ||
     dateStarted != book.dateStarted ||
     dateCompleted != book.dateCompleted ||
-    recommendedBy != book.recommendedBy
+    recommendedBy != book.recommendedBy ||
+    selectedBookCoverData != book.bookCover
   }
 }
 

@@ -32,6 +32,9 @@ final class Book {
   @Relationship(inverse: \Genre.books)
   var genres: [Genre]?
   
+  @Attribute(.externalStorage)
+  var bookCover: Data?
+  
   var icon: String {
     switch(status) {
     case .onShelf: "checkmark.diamond.fill"
