@@ -47,7 +47,7 @@ struct GenresView: View {
               }
             }
             .onDelete { indexSet in
-              indexSet.forEach { index in
+              indexSet.reversed().forEach { index in
                 let genre = genres[index]
                 if let index = book.genres?.firstIndex(where: { $0.id == genre.id }) {
                   book.genres?.remove(at: index)

@@ -92,7 +92,7 @@ struct QuotesListView: View {
         }
       }
       .onDelete { indexSet in
-        indexSet.forEach { index in
+        indexSet.reversed().forEach { index in
           withAnimation {
             if let quote = book.quotes?[index] {
               modelContext.delete(quote)
