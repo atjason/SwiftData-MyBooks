@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct EditBookView: View {
   @Environment(\.dismiss) var dismiss
@@ -22,6 +23,8 @@ struct EditBookView: View {
   @State private var dateStarted = Date.distantPast
   @State private var dateCompleted = Date.distantPast
   @State private var showGenres = false
+  @State private var selectedBookCover: PhotosPickerItem?
+  @State private var selectedBookCoverData: Data?
 
   var body: some View {
     HStack {
@@ -70,20 +73,43 @@ struct EditBookView: View {
         }
       }
       Divider()
-      LabeledContent {
-        RatingsView(maxRating: 5, currentRating: $rating, width: 30)
-      } label: {
-        Text("Rating").foregroundStyle(.secondary)
-      }
-      LabeledContent {
-        TextField("", text: $title)
-      } label: {
-        Text("Title").foregroundStyle(.secondary)
-      }
-      LabeledContent {
-        TextField("", text: $author)
-      } label: {
-        Text("Author").foregroundStyle(.secondary)
+      HStack {
+        PhotosPicker(
+          selection: $selectedBookCover,
+          matching: .images,
+          photoLibrary: .shared()) {
+            Group {
+              if let selectedBookCoverData,
+                 let uiImage = UIImage(data: selectedBookCoverData) {
+                Image(uiImage: uiImage)
+                  .resizable()
+                  .scaledToFit()
+              } else {
+                Image(systemName: "photo")
+                  .resizable()
+                  .scaledToFit()
+                  .tint(.primary)
+              }
+            }
+            .frame(width: 75, height: 100)
+          }
+        VStack {
+          LabeledContent {
+            RatingsView(maxRating: 5, currentRating: $rating, width: 30)
+          } label: {
+            Text("Rating").foregroundStyle(.secondary)
+          }
+          LabeledContent {
+            TextField("", text: $title)
+          } label: {
+            Text("Title").foregroundStyle(.secondary)
+          }
+          LabeledContent {
+            TextField("", text: $author)
+          } label: {
+            Text("Author").foregroundStyle(.secondary)
+          }
+        }
       }
       LabeledContent {
         TextField("", text: $recommendedBy)
