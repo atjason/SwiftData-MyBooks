@@ -49,7 +49,7 @@ struct GenresView: View {
             .onDelete { indexSet in
               indexSet.reversed().forEach { index in
                 let genre = genres[index]
-                if let index = book.genres?.firstIndex(where: { $0.id == genre.id }) {
+                if let index = book.genres?.firstIndex(of: genre) {
                   book.genres?.remove(at: index)
                 }
                 modelContext.delete(genre)
