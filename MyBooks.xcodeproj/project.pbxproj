@@ -96,6 +96,7 @@
 				964EC1B02B5812450068E9F4 /* Info.plist */,
 				964EC1AF2B5812330068E9F4 /* MyBooks.entitlements */,
 				964EC1802B566C710068E9F4 /* Assets.xcassets */,
+				964EC1B12B58A7FB0068E9F4 /* Previews */,
 				964EC1822B566C710068E9F4 /* Preview Content */,
 			);
 			path = MyBooks;
@@ -105,9 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				964EC1832B566C710068E9F4 /* Preview Assets.xcassets */,
-				964EC1922B5766200068E9F4 /* BookSamples.swift */,
-				964EC1A22B57B4150068E9F4 /* GenreSamples.swift */,
-				964EC1942B5767780068E9F4 /* PreviewContent.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -157,6 +155,16 @@
 				964EC1AD2B57C5430068E9F4 /* GenresStackView.swift */,
 			);
 			path = Genres;
+			sourceTree = "<group>";
+		};
+		964EC1B12B58A7FB0068E9F4 /* Previews */ = {
+			isa = PBXGroup;
+			children = (
+				964EC1922B5766200068E9F4 /* BookSamples.swift */,
+				964EC1A22B57B4150068E9F4 /* GenreSamples.swift */,
+				964EC1942B5767780068E9F4 /* PreviewContent.swift */,
+			);
+			path = Previews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
